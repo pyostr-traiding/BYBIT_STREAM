@@ -11,9 +11,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.25'
-        reservations:
           cpus: '0.15'
+        reservations:
+          cpus: '0.08'
     networks:
       - GLOBAL_NETWORK
 
