@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  service:
+    container_name: combinator
+    build: ./
+    restart: always
+    env_file: ./.env
+    command: ["poetry", "run", "python", "main.py"]
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+        reservations:
+          cpus: '0.15'
+    networks:
+      - GLOBAL_NETWORK
+
+volumes:
+  redis-data:
+
+networks:
+  GLOBAL_NETWORK:
+    external: true
