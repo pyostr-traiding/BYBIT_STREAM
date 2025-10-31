@@ -1,12 +1,13 @@
+from dotenv import load_dotenv
+
 import os
 
 import redis
-from dotenv import load_dotenv
 
 load_dotenv()
 
 # ===== НАСТРОЙКИ =====
-USE_TESTNET = True
+USE_TESTNET = False
 CHANNEL_TYPE = "linear"
 RECONNECT_DELAY = 2  # секунды
 
